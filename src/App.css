@@ -1,38 +1,335 @@
-.App {
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 16px;
+}
+
+body {
+  height:max-content;
+  width: 100%;    
+  /* background-image: url('./resources/wheat-header.jpeg'); */
+}
+
+p{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.header {
+  display: inline-flex;
+  align-items: center;
+  height: 15vh;
+  width: 100%;
+  border-bottom: 2px inset rgb(3, 2, 2);
+  position: relative;
+  top: 0px;
+  z-index: 1;
+  color: white;
+} 
+
+.header-title{
+  text-align: center;
+  color: black;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  font-size: 3rem;
+  font-style: italic;
+  z-index: 1;
+}
+
+.header-title:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.header .wallet-connect{
+  float: right;
+  margin-right: 5%;  
+}
+
+.header-link{
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 3%;
+}
+
+.wallet-connect{
+  width: 40%;
+  min-width: 200px;
+  height: 5vh;
+  background-color: rgb(27,27,27);
+  color: whitesmoke;
+  overflow: hidden;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+.wallet-connect:hover {
+  font-size: 1.6rem;
+  background-color: rgb(57, 57, 57);    
+  cursor: pointer;
+}
+
+.home-section{
+  width: 100%;
+  height: fit-content;
+  background-color: rgb(124, 10, 2);
+  min-height: 70vh;
+  position: relative;
+  
+}
+
+#two{ 
+  background-color: whitesmoke;
+
+}
+
+.home-section-title{
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding-bottom: 2.5%;
+  background-color: inherit;
+  height: 12vh;
+  width: 100%;
+  color: black;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+  font-style: italic;
+  padding-left: 2.5%;
+  padding-top: 1%;
+}
+
+#home-section-title-right{
+  position: relative;
+}
+
+.mint-title{
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2%;
+  background-color: inherit;
+  height: 12vh;
+  width: 100%;
+  color: black;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+  font-style: italic;
+  padding-left: 2.5%;
+  padding-top: 1%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-section-content{
+  display: inline-flex;
+  width: 100%;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.intro-text-box {
+  width: 70%;
+  position: relative;
+  margin-bottom: 2%;
+  text-align: center;
+  font-size: 2rem;
+  padding-right: 2.5%;
+  padding-left: 2.5%;
+} 
+
+.intro-farmers{
+  width: 30%;
+  height: 100%;
+  position: relative;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-top: 7.5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.hiw-farmers{
+  width: 30%;
+  height: fit-content;
+}
+
+.farmer {
+  height: 50%; 
+  width: 100%;
+  border-radius: 20px;
+  border-style:solid;
+  border-color: black;
+  border-width: 2px;
+}
+
+.hiw-farmers .farmer{
+  width: 80%;
+  position: relative;
+  left: 10%;  
+}
+
+.home-section-text-box {
+  width: 70%;
+  position: relative;
+  margin-bottom: 2%;
+  text-align: justify;
+  padding-left: 2.5%;
+  background-color: inherit;
+}
+
+.home-section-p{
+  font-size: 1.5rem;
+}
+
+.home-section-more {
+  border-radius: 20px;
+  font-size: 2rem;
+  width: 70%;
+  height: fit-content;
+  margin-top: 5%;
+  cursor: pointer;
+  
+  background-color: inherit;
+}
+
+.mint-section-content {
+  text-align: center;
+}
+
+.mintbox{
+  display: block;
+}
+
+.tomint-box{
+  display: inline-flex
+}
+
+.tomint{
+  font-size: 2.5rem;
+  width: 50px;
+  position: relative;
+  font-weight: bold;
+  background-color: inherit;
+  margin-left: 5%;
+  border: none;
+  cursor: pointer;
+  line-height: 3rem;
+}
+
+.tomint:hover{
+  font-size: 3.5rem;
+}
+
+.tomint-amount{
+  font-size: 2.5rem;
+  width: 50px;
+  position: relative;
+  font-weight: bold;
+  background-color: inherit;
+  margin-left: 5%;
+  margin-top: .5rem;
+  border: none;
+}
+
+
+.mint{
+  width: 20%;
+  min-width: 200px;
+  height: 5vh;
+  background-color: rgb(27,27,27);
+  color: whitesmoke;
+  overflow: hidden;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  margin-top: 1%;
+  cursor: pointer;
+}
+
+.mint:hover{
+  font-size: 1.7rem;
+  background-color: rgb(57, 57, 57);  
+}
+
+.mint-p{
+  font-size: 1.5rem;
+  margin-top: 1%;
+}
+
+.chart{
+  width: 70%;
+  height: 50vh;
+  background-color: rgb(27,27,27);
+  border-radius: 20px;
+  border: 2px outset rgb(57, 57, 57);
+  border-bottom-style: inset;
+  border-right-style: inset;
+  position: relative;
+  left: 15%;
+}
+
+.returns{
+  width: 70%;
+  height: 20vh;
+  position: relative;
+  left: 15%;
+  display: inline-flex;
+  text-align: center;
+  margin-bottom: 2.5%;
+}
+
+.return{
+  width: 50%;
+  height: 50%;
+  font-size: 2rem;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.vote{
+  width: 70%;
+  height: fit-content;
+  position: relative;
+  left: 15%;
+  display: inline-flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.vote-choice{
+  display: inline-flex;
+  line-height: 3rem;
+  width: 100%;
+  font-size: 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: inherit;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.choice{
+  width: 5%;
+  height: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.vote-submit{
+  font-size: 2rem;
+  border-radius: 20px;
+  width: 25%;
+  position: relative;
+  left: 37%;
+  margin-top: 5%;
+  cursor: pointer;
+}
+
+.squaredone{
+  height: 30px;
+  width: 30px;
+}
+
+
+.footer{
+  height: 20vh;
+
 }

@@ -1,24 +1,47 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
+import { useMoralis } from "react-moralis";
+import Header from  './components/Header';
+import MintDashboard from './components/MintDashboard';
+import Banner from './components/Banner';
+import Vote from "./components/Vote";
+import Market from "./components/Market";
+import Portfolio from "./components/Portfolio";
+import Footer from "./components/Footer";
 import './App.css';
 
 function App() {
+  const { authenticate, isAuthenticated, user } = useMoralis();
+  const [ show, setShow ] = useState('home');
+
+  const content = {
+    home : (
+      <div>
+        <Banner />
+        <MintDashboard />
+      </div>
+    ),
+    vote : (
+      <Vote />
+    ),
+    market: (
+      <Market />
+    ), 
+    portfolio: (
+      <Portfolio />
+    )
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header
+        home={() => setShow('home')}
+        vote={() => setShow('vote')}
+        portfolio={() => setShow('portfolio')}
+        market={() => setShow('market')}
+        mint={() => setShow('home')}
+        />
+     {content[show]}
+     <Footer />
+    </>
   );
 }
 
