@@ -9,10 +9,6 @@ function Vote() {
   const [ link, setLink ] = useState('')
   const [ assets, setAssets ] = useState('')
 
-  const choose = (id) => {
-    setChoice(id)
-  }
-
   const submitChoice = (e) => {
     e.preventDefault()
     alert(choice)
@@ -20,7 +16,11 @@ function Vote() {
 
   const submitOption = (e) => {
     e.preventDefault()
-    alert(description)
+    if(description && protocol && link && assets){
+      alert(description)
+    } else{
+      alert('Enter all require information')
+    }
   }
 
   return (
@@ -57,7 +57,7 @@ function Vote() {
           />
         </div>
         <div className='input-option'>
-        <p>Prtotocl: </p>
+        <p>Prototocl: </p>
         <input
           type='text'
           value={protocol}

@@ -379,6 +379,31 @@ p{
   position: relative;
 }
 
+.market-stats{
+  width: 80%;
+  min-height: 50vh;
+  border-radius: 20px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+}
+
+.stat{
+  width: 50%;
+  text-align: center;
+}
+
+.market{
+  width: 80%;
+  min-height: 50vh;
+  border-radius: 20px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
 .footer{
   height: 20vh;
 

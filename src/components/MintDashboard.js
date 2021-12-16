@@ -1,4 +1,3 @@
-import { mnemonicToEntropy } from "@ethersproject/hdnode";
 import React, { useState, useRef } from "react";
 import { useMoralis } from "react-moralis";
 import WalletConnect from  './walletConnect';
