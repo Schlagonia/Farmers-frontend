@@ -82,11 +82,11 @@ p{
   background-color: rgb(124, 10, 2);
   min-height: 70vh;
   position: relative;
-  
+  border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 #two{ 
-  background-color: whitesmoke;
+  background-color: white;
 
 }
 
@@ -102,6 +102,12 @@ p{
   font-style: italic;
   padding-left: 2.5%;
   padding-top: 1%;
+}
+
+.subtitle{
+  font-size: 2rem;
+  margin-bottom: .5%;
+  text-align: center;
 }
 
 #home-section-title-right{
@@ -298,19 +304,51 @@ p{
 
 .vote-choice{
   display: inline-flex;
-  line-height: 3rem;
+  min-height: 3rem;
   width: 100%;
   font-size: 2rem;
-  border-radius: 20px;
   cursor: pointer;
-  background-color: inherit;
 }
 
-.choice{
+.check-box{
   width: 5%;
   height: 100%;
+}
+
+.choice-content{
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 20px;
-  cursor: pointer;
+  display: inline-flex;
+  width: 95%;
+}
+
+.choice-content:hover{
+  font-size: 2.05rem;
+  background-color: rgb(151, 14, 26);
+}
+
+.choice-text{
+  height: 100%;
+  width: 96%;
+  padding-left: 2.5%;
+}
+
+.choice-link{
+  width: 4%;
+  height: 100%;
+}
+
+.external-link{
+  height: 1.5rem;
+  width: 1.5rem;
+  position: relative;
+  top: .75rem;
+  transform: translateY(-.75rem);
+}
+
+.external-link:hover{
+  height: 1.55rem;
+  width: 1.55rem;
 }
 
 .vote-submit{
@@ -323,11 +361,23 @@ p{
   cursor: pointer;
 }
 
-.squaredone{
-  height: 30px;
-  width: 30px;
+.input-option{
+  display: inline-flex;
+  line-height: 3rem;
+  font-size: 2rem;
+  margin-top: 10px;
 }
 
+.input-option p{
+  width: 30%;
+}
+
+.input-option input{
+  font-size: 2rem;
+  border-radius: 10px;
+  width: 70%;
+  position: relative;
+}
 
 .footer{
   height: 20vh;

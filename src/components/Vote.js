@@ -4,7 +4,14 @@ import Choice from './Choice'
 
 function Vote() {
   const [ choice, setChoice ] = useState('')
-  const [ option, setOption ] = useState('')
+  const [ description, setDescription ] = useState('')
+  const [ protocol, setProtocol ] = useState('')
+  const [ link, setLink ] = useState('')
+  const [ assets, setAssets ] = useState('')
+
+  const choose = (id) => {
+    setChoice(id)
+  }
 
   const submitChoice = (e) => {
     e.preventDefault()
@@ -13,14 +20,20 @@ function Vote() {
 
   const submitOption = (e) => {
     e.preventDefault()
-    alert(option)
+    alert(description)
   }
 
   return (
+   <> 
     <div className='home-section'>
       <p className='mint-title' >Vote on how to deploy the Farmers Treasury!</p>
+      <p className="subtitle">Choose from one of the options below</p>
       <form className='vote' onSubmit={submitChoice}>
-        <Choice />
+        <Choice 
+          chosen={choice}
+          id='AVAX'
+          choose={(id) => setChoice(id)}
+        />
         
         <input 
           className='vote-submit' 
@@ -28,21 +41,53 @@ function Vote() {
           value="Submit" 
           />
       </form>
+    </div>
+    <div  className='home-section' id="two">
+      <p className="mint-title">Submit a new investment option!</p>
       <form
-        className="add-option"
+        className="vote"
         onSubmit={submitOption}
       >
+        <div className='input-option'>
+          <p>Description: </p>
         <input
           type='text'
-          value={option}
-          onChange={(e) => setOption(e.target.value)}
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
           />
-          <input
+        </div>
+        <div className='input-option'>
+        <p>Prtotocl: </p>
+        <input
+          type='text'
+          value={protocol}
+          onChange={(e) => setProtocol(e.target.value)}
+          />
+        </div>
+        <div className='input-option'>
+        <p>Assets: </p>
+        <input
+          type='text'
+          value={assets}
+          onChange={(e) => setAssets(e.target.value)}
+          />
+        </div>
+        <div className='input-option'>
+          <p>Link: </p>
+        <input
+          type='text'
+          value={link}
+          onChange={(e) => setLink(e.target.value)}
+          />
+        </div>
+        <input
             type='submit'
-            value='submit'
+            value='Submit'
+            className='vote-submit'
             />
       </form>
     </div>
+   </> 
   );
 }
 

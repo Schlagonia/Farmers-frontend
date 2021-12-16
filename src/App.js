@@ -11,7 +11,7 @@ import './App.css';
 
 function App() {
   const { authenticate, isAuthenticated, user } = useMoralis();
-  const [ show, setShow ] = useState('home');
+  const [ show, setShow ] = useState('vote');
 
   const content = {
     home : (
